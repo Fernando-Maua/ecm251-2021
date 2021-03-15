@@ -30,6 +30,31 @@ public class Sistema {
                 this.conta.depositar(valorParaDepositar);
                 System.out.println("Operação realizada com sucesso!");
                 break;
+            case 3:
+                System.out.println("Informe o valor para sacar");
+                double valorParaSacar = scanner.nextDouble();
+                if(this.conta.sacar(valorParaSacar)){
+                    System.out.printf("Operação realizada com sucesso!");
+                } else {
+                    System.out.println("Algo de errado aconteceu: Saldo");
+                }
+                break;
+            case 5:
+                System.out.println("Nome do titulo a pagar:");
+                String nomeTitulo = scanner.next();
+                System.out.println("Valor do titulo:");
+                double valorTitulo = scanner.nextDouble();
+                System.out.println("Valor juros por dia:");
+                double valorJurosPorDia = scanner.nextDouble();
+                System.out.println("Informe a data de vencimento (aaaa-mm-dd):0");
+                String dataVencimentoTitulo = scanner.next();
+                Titulo titulo = new Titulo(valorTitulo, nomeTitulo, valorJurosPorDia, dataVencimentoTitulo);
+                if(this.conta.sacar(titulo.getValorPagamento())){
+                    System.out.println("Operação realizada com sucesso!");
+                } else {
+                    System.out.println("Não foi possivel realizar a operação!");
+                }
+                break;
             default:
                 System.out.println("Opção ainda não implementada!");
                 break;
@@ -43,6 +68,7 @@ public class Sistema {
     }
 
     private void exibirMenu() {
+        System.out.println(" ");
         System.out.println("Bem vindo ao MauaBank");
         System.out.println("1 - Visualizar Saldo");
         System.out.println("2 - Depositar dinheiro");
