@@ -2,14 +2,19 @@ package kon.laise.fernando;
 
 public class Conta {
     //Atributos
-    Cliente cliente;
-    int numero;
-    double saldo;
+    private Cliente cliente;
+    private int numero;
+    private double saldo;
 
     //Metodos
-    void visualizarSaldo() {
-        double saldo = 50;
-        System.out.println("Valor do Saldo: R$" + this.saldo);
+    public Conta(String cliente, int numero, double saldo){
+        this.cliente = new Cliente(cliente);
+        this.numero = numero;
+        this.saldo = saldo;
+    }
+
+    public double getSaldo() {
+        return this.saldo;
     }
     public boolean sacar(double valor) {
         if (this.saldo>=valor) {
