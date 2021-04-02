@@ -1,6 +1,6 @@
 package kon.laiser.fernando;
 import java.util.Random;
-import java.util.Scanner;
+
 
 public class Transacoes {
     //Métodos

@@ -3,12 +3,11 @@
  */
 
 package kon.laiser.fernando;
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
 
         // Criação dos usuários
         System.out.println();       // Pular uma linha
