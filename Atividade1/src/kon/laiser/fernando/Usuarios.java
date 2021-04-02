@@ -43,12 +43,12 @@ public class Usuarios {
         return QRCode;
     }
 
-    public static boolean pagarRequisicao(Usuarios pagador, Usuarios recebedor, double valor){
-        if (pagador.getConta().getSaldo() >= valor) {
-            Contas.pagar(pagador.getConta(), valor);
-        Contas.receber(recebedor.getConta(), valor);
+    public static boolean pagarRequisicao(Usuarios user, Usuarios userRecebe, double valor){
+        if (user.getConta().getSaldo() >= valor) {
+            Contas.pagar(user.getConta(), valor);
+            Contas.receber(userRecebe.getConta(), valor);
         return true;
-    }
+        }
         return false;
     }
 
