@@ -47,7 +47,7 @@ public class Main {
         System.out.println();
 
         // Operações bancárias
-        user1.requisitar(250);
+        user1.requisitar(2500);
         user2.depositar(user1);
         user3.depositar(user1);
         user2.depositar(user1);
@@ -60,10 +60,7 @@ public class Main {
         System.out.println(user1.getNome() + ": " + user1.getConta().getSaldo() +" R$");
         System.out.println(user2.getNome() + ": " + user2.getConta().getSaldo() +" R$");
         System.out.println(user3.getNome() + ": " + user3.getConta().getSaldo() +" R$");
-
-        System.out.println(user1);
-        System.out.println(user2);
-        System.out.println(user3);
+        
     }
 }
 
