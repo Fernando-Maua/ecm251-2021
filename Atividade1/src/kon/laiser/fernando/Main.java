@@ -15,6 +15,7 @@ public class Main {
         String nameUser2, email2;
         String nameUser3, email3;
 
+        // Digitação dos nomes dos usuários
         System.out.println("Digite o nome da primeira conta: ");
         nameUser1 = input.nextLine();
         System.out.println("Digite o nome da segunda conta: ");
@@ -22,6 +23,7 @@ public class Main {
         System.out.println("Digite o nome da terceira conta: ");
         nameUser3 = input.nextLine();
 
+        // Email dos usuários
         email1 = nameUser1.replaceAll(" ","");
         email2 = nameUser2.replaceAll(" ","");
         email3 = nameUser3.replaceAll(" ","");
