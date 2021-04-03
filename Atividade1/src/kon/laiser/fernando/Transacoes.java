@@ -3,7 +3,9 @@ import java.util.Random;
 
 
 public class Transacoes {
+
     //Métodos
+
     private static int getRandomNumberInRange(int min, int max) {  // Gerar número aleatório
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;

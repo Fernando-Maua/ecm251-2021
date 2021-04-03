@@ -1,7 +1,9 @@
 package kon.laiser.fernando;
 
 public class Contas {
+
     // Atributos
+
     private int idConta;
     private double saldo;
     private static int numContas = 0;
@@ -9,6 +11,7 @@ public class Contas {
 
 
     // Construtor
+
     public Contas(double saldo) {
         numContas += 1;
         this.idConta = numContas;   // o id de cada conta será igual ao "número de criação" da conta
@@ -16,6 +19,7 @@ public class Contas {
     }
 
     //Getters
+
     public int getIdConta() {
         return this.idConta;
     }
@@ -29,6 +33,7 @@ public class Contas {
     }
 
     //Métodos
+
     public void gravarQRCode(String nome, double valor) {
         this.QRCode = Transacoes.gerarQRCode(this.idConta, nome, valor);    //Grava o QRCode na conta do usuário
     }

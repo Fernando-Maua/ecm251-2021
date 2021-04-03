@@ -1,13 +1,16 @@
 package kon.laiser.fernando;
 
 public class Usuarios {
+
     //Informações do usuário
+
     private String nome;
     private String senha;
     private String email;
     private Contas conta;
 
     //Construtor
+
     public Usuarios(String nome, String senha, String email){
         this.nome = nome;
         this.senha = senha;
@@ -15,6 +18,7 @@ public class Usuarios {
     }
 
     //Getters
+
     public String getNome() {
         return this.nome;
     }
@@ -32,11 +36,13 @@ public class Usuarios {
     }
 
     // Criação de uma conta inical
+
     public void criarConta(double saldo){
         this.conta = new Contas(saldo);
     }
 
     //Operações
+
     public String requisitar(double valor){
         this.conta.gravarQRCode(this.nome, valor);
         String QRCode = Transacoes.gerarQRCode(conta.getIdConta(), this.nome, valor);
