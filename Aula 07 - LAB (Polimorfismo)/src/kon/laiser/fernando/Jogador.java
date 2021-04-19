@@ -3,13 +3,14 @@ package kon.laiser.fernando;
 public class Jogador {
     private String nome;
     private boolean ehHumano;
+    private Jogada jogada;
 
-    public Jogador(String nome, boolean ehHumano){
+    public Jogador(String nome, boolean ehHumano) {
         this.nome = nome;
         this.ehHumano = ehHumano;
     }
 
-    public Jogador(String nome){
+    public Jogador(String nome) {
         this.nome = nome;
         this.ehHumano = false;
     }
@@ -18,14 +19,20 @@ public class Jogador {
         return nome;
     }
 
-    public boolean getEhHumano() {
+    public boolean isEhHumano() {
         return ehHumano;
     }
 
-    public void getJogada(){
+    public Jogada getJogada() {
+        return jogada;
+    }
+
+    public void setJogada(Jogada jogada) {
         this.jogada = jogada;
     }
-    public void setJogada(Jogada jogada){
-        this.jogada = jogada;
+
+    @Override
+    public String toString() {
+        return getNome();
     }
 }
