@@ -1,4 +1,9 @@
-package kon.laiser.fernando;
+package kon.laiser.fernando.pedra_papel_tesoura.controladores;
+
+import kon.laiser.fernando.pedra_papel_tesoura.Models.*;
+import kon.laiser.fernando.pedra_papel_tesoura.Models.classico.Papel;
+import kon.laiser.fernando.pedra_papel_tesoura.Models.classico.Pedra;
+import kon.laiser.fernando.pedra_papel_tesoura.Models.classico.Tesoura;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +12,7 @@ public class Sistema {
     private Jogador jogador1;
     private Jogador jogador2;
     private Scanner scanner;
-    private final Jogada [] jogadas = new Jogada[]{new Pedra(), new Papel(), new Tesoura()};
+    private final Jogada[] jogadas = new Jogada[]{new Pedra(), new Papel(), new Tesoura()};
 
     public Sistema() {
         scanner = new Scanner(System.in);

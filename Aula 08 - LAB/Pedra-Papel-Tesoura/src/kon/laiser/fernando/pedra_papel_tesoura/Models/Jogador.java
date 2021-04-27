@@ -1,4 +1,4 @@
-package kon.laiser.fernando;
+package kon.laiser.fernando.pedra_papel_tesoura.Models;
 
 public class Jogador {
     private String nome;

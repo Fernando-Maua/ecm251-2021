@@ -1,4 +1,6 @@
-package kon.laiser.fernando;
+package kon.laiser.fernando.pedra_papel_tesoura;
+
+import kon.laiser.fernando.pedra_papel_tesoura.controladores.Sistema;
 
 public class Main {
 
