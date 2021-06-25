@@ -11,7 +11,8 @@ public class Escolha {
     public void Escolher (String escolha) {
         switch (escolha){
             case "1":
-                System.out.println("Faz o cadastro");
+                Cadastro cadastro = new Cadastro();
+                cadastro.Cadastrar();
                 System.out.println("Aperte Enter para continuar!");
                 break;
             case "2":

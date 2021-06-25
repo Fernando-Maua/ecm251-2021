@@ -34,7 +34,7 @@ public class Main {
     }
 
     private static void criarNota(List<Item> items) throws Exception{
-        FileWriter fileWriter = new FileWriter("nota.toguro");
+        FileWriter fileWriter = new FileWriter("nota.csv");
         fileWriter.write("=== Resumo Pedido ===");
         fileWriter.append("Total de Items:" + items.size()+"\n");
         double total = 0;
