@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ab42dd7-f804-4032-9f55-03e2ba24d8a0" name="Default Changelist" comment="" />
+    <list default="true" id="2ab42dd7-f804-4032-9f55-03e2ba24d8a0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Mask_Society/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Controle/Sistema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Models/Acoes/Escolha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Models/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Models/MobileMembers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aula 09 - teoria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Aula 09 - teoria/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aula11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Aula11/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Enums/HorarioSistema.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Enums/HorarioSistema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Interfaces/Apresentacao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Interfaces/PostarMensagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Interfaces/Apresentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Interfaces/IApresentacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Interfaces/PostarMensagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Interfaces/IPostarMensagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,13 +99,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Aula01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="kon.laiser.fernando.pedra_papel_tesoura.Main" />
@@ -100,11 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

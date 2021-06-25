@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17e1d194-1b31-4b03-92cf-2e0e957e1338" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Mask_Society/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Controle/Sistema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aula 08 - LAB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Aula 08 - LAB/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Aula11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Aula11/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Enums/HorarioSistema.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Enums/HorarioSistema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Interfaces/Apresentacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Interfaces/Apresentacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Interfaces/PostarMensagem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Interfaces/PostarMensagem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/out/production/Mask_Society/kon/laiser/fernando/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Interfaces/Apresentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Interfaces/IApresentacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Interfaces/PostarMensagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Interfaces/IPostarMensagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mask_Society/src/kon/laiser/fernando/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Estudos - Extra/Java/Caracteristicas-da-linguagem2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Aula 08 - LAB" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
