@@ -1,15 +1,13 @@
 package kon.laiser.fernando.Models.Acoes;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 ;
 
 public class Cadastro {
 
     public static void Cadastrar(){
-        String func, nome, ID;
+        String func, nome, email;
         Scanner input = new Scanner(System.in);
 
         System.out.println("Função do usuário:");
@@ -18,8 +16,8 @@ public class Cadastro {
         System.out.println("Nome do usuário:");
         nome = input.nextLine();
 
-        System.out.println("ID do usuário:");
-        ID = input.nextLine();
+        System.out.println("Email do usuário:");
+        email = input.nextLine();
 
         File fw = null;
         try {
@@ -38,7 +36,7 @@ public class Cadastro {
             BufferedWriter bw = new BufferedWriter(fwArquivo);
 
             //escreve o registro no arquivo e pula uma linha com o \n
-            bw.write(func+"; "+nome+"; "+ID+"\n");
+            bw.write(func+"; "+nome+"; "+email+"\n");
 
             //fecha o arquivo
             bw.close();
@@ -57,24 +55,24 @@ public class Cadastro {
             Scanner scanner = new Scanner(file);
             //Passa por todos os elementos do arquivo
             while(scanner.hasNext()){
+                int i = 0;
                 String linha = scanner.nextLine();
                 dados.add(Dados.pegaDados(linha));
             }
-            criarArquivo(dados);
 
+            //Criação do CSV
+            FileWriter fileWriter = new FileWriter("arquivo_super_Secreto_nao_abrir.csv");
+            fileWriter.write("=== Dados dos Usuarios ===\n");
+            fileWriter.write("Funcao;Nome;Email;ID\n");
+            int ID = 0;
+            for (Dados dado : dados) {
+                fileWriter.append(dado.funcao+"; "+dado.nome+"; "+dado.email+"; "+ID+"\n");
+                ID++;
+            }
+            fileWriter.close();
         }
         catch (Exception exception){
             System.out.println("Algo deu errado:");
         }
-    }
-
-    private static void criarArquivo(List<Dados> dados) throws Exception{
-
-        FileWriter fileWriter = new FileWriter("arquivo_super_Secreto_nao_abrir.csv");
-        fileWriter.write("=== Dados dos Usuarios ===\n");
-        for (Dados dado : dados) {
-            fileWriter.append(dado.funcao+"; "+dado.nome+"; "+dado.ID+"\n");
-        }
-        fileWriter.close();
     }
 }
