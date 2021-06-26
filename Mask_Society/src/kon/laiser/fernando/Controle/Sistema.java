@@ -1,32 +1,59 @@
 package kon.laiser.fernando.Controle;
 
-
 import kon.laiser.fernando.Enums.HorarioSistema;
-import kon.laiser.fernando.Models.Acoes.Escolha;
-import kon.laiser.fernando.Models.Acoes.Horario;
+import kon.laiser.fernando.Models.Acoes.Cadastro;
 
 import java.util.Scanner;
 
 public class Sistema {
+    final private static Scanner scanner = new Scanner(System.in);
+    private static HorarioSistema HoraAtual = HorarioSistema.Regular;
+
     public static void run() {
-        Scanner input = new Scanner(System.in);
-        Escolha escolha = new Escolha();
-        Horario horario = new Horario();
+        boolean running = true;
 
-        do {
+
+        while(running){
             System.out.println("******* Bem Vindo ao Mask_Society *******\n");
+            System.out.println(
 
-            System.out.println("Você está no horário de trabalho " + horario.getHorario());
-            System.out.println("Escolha uma atividade:\n");
-            System.out.println("Cadastrar (1)");
-            System.out.println("Postar mensagem (2)");
-            System.out.println("Perguntar o horário de trabalho (3)");
-            System.out.println("Trocar o horário de trabalho (4)");
-            System.out.println("Encerrar (0)");
+                    "--------MENU DE OPÇÕES--------\n" +
+                            "HORARIO ATUAL: " + HoraAtual + "\n" +
+                            "1 - Cadastrar um novo Membro:\n"+
+                            "2 - Postar mensagem\n" +
+                            "3 - Trocar o horário de trabalho\n" +
+                            "4 - Verificar Horário\n"+
+                            "5 - Encerrar o Sistema\n"+
+                            "Digite a sua Opção: "
+            );
+            int input = scanner.nextInt();
+            switch (input){
+                case 1 :
+                    Cadastro cadastro = new Cadastro();
+                    cadastro.Cadastrar();
+                    break;
+                case 2 :
+                    System.out.println("Postar mensagem");
+                case 3:
+                    if(HoraAtual == HorarioSistema.Regular) {
+                        HoraAtual = HorarioSistema.Extra    ;
+                    }
+                    else {
+                        HoraAtual = HorarioSistema.Regular;
+                    }
+                    break;
+                case 4 :
+                    System.out.println("Você está no horário: " + HoraAtual);
+                    break;
+                case 5:
+                    System.out.println("Encerrando Sistema ...");;
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Opção Inválida!");
+                    break;
 
-            escolha.Escolher(input.nextLine());
-
-        }while(input.nextLine()!= "0");
+            }
+        }
     }
-
 }
