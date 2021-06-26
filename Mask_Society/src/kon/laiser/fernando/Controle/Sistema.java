@@ -65,8 +65,25 @@ public class Sistema{
                     break;
 
                 case 4:
-                    for(Membro membros : lista.getListaDeMembros())
-                        membros.ExibirRelatorio();
+                    try {
+                        for (int i = 0; i < lista.getListaDeMembros().size(); i++) {
+                            System.out.println("MEMBRO " + i + " :");
+                            lista.getListaDeMembros().get(i).ExibirRelatorio();
+                        }
+                        System.out.println("Escolha um Membro para Remover: ");
+
+                        int remove = scanner.nextInt();
+                        if (remove < lista.getListaDeMembros().size()) {
+                            lista.RemoverMembro(lista.getListaDeMembros().get(remove));
+                            System.out.println("Membro " + remove + "Removido Com Sucesso!");
+
+                        } else {
+                            System.out.println("Opção Invalida.");
+                        }
+                    }catch (IOException e){
+                        System.out.println("Algo deu errado!");
+                    }
+
 
                     System.out.println("Press Enter to Continue...");
                     System.in.read();
