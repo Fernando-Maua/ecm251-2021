@@ -1,6 +1,8 @@
 package kon.laiser.fernando.Models.Acoes;
 
 
+import kon.laiser.fernando.Enums.HorarioSistema;
+
 public class Escolha {
     String escolha;
 
@@ -20,10 +22,16 @@ public class Escolha {
                 System.out.println("Aperte Enter para continuar!");
                 break;
             case "3":
-                System.out.println("Troca horario");
+                Horario horario = new Horario();
+                System.out.println("Você está no horário " );
                 System.out.println("Aperte Enter para continuar!");
                 break;
             case "4":
+                Horario troca = new Horario();
+                troca.definirHorario();
+                System.out.println("Aperte Enter para continuar!");
+                break;
+            case "0":
                 System.out.println("Encerrando o sistema ...");
                 System.exit(0);
                 break;
