@@ -1,12 +1,11 @@
 package kon.laiser.fernando.Models;
 
-
 import kon.laiser.fernando.Enums.HorarioSistema;
 import kon.laiser.fernando.Enums.TiposMembros;
 
-public class MobileMembers extends Membro{
+public class BigBrothers extends Membro{
 
-    public MobileMembers(String nome, String email, TiposMembros funcao){
+    public BigBrothers(String nome, String email, TiposMembros funcao){
         super(nome, email, funcao);
 
     }
@@ -19,8 +18,6 @@ public class MobileMembers extends Membro{
                         " de email "        +getEmail()+
                         " com a Função de " +getFuncao()
         );
-
-
     }
 
     @Override
@@ -30,15 +27,13 @@ public class MobileMembers extends Membro{
                 break;
             case Regular:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
-                System.out.println("Happy Coding!\n");
+                System.out.println("Sempre ajudando as pessoas membros ou não S2!\n");
                 break;
 
             case Extra:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
-                System.out.println("Happy_C0d1ng. Maskers.\n");
+                System.out.println("...\n");
                 break;
         }
-
-
     }
 }

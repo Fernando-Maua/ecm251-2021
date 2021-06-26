@@ -1,12 +1,12 @@
 package kon.laiser.fernando;
 
 import kon.laiser.fernando.Controle.Sistema;
-import kon.laiser.fernando.Enums.TipoMembros;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         Sistema sistema = new Sistema();
-        Sistema.run();
+        sistema.run();
     }
+
 }

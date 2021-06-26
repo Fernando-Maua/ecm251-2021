@@ -1,0 +1,24 @@
+package kon.laiser.fernando.Controle;
+
+import kon.laiser.fernando.Models.Membro;
+
+import java.util.ArrayList;
+
+public class ControleLista {
+    private ArrayList<Membro> ListaDeMembros = new ArrayList<Membro>();
+
+    //getter
+    public ArrayList<Membro> getListaDeMembros() {
+        System.out.println(ListaDeMembros);
+        return ListaDeMembros;
+    }
+
+    public void AddMembro(Membro membro){
+        this.ListaDeMembros.add(membro);
+    }
+
+    public void RemoverMembro(Membro membro){
+        this.ListaDeMembros.remove(membro);
+
+    }
+}

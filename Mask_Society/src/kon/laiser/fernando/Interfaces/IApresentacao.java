@@ -1,5 +1,6 @@
 package kon.laiser.fernando.Interfaces;
 
+
 public interface IApresentacao {
-    void exibirRelatorio();
+    public abstract void ExibirRelatorio();
 }

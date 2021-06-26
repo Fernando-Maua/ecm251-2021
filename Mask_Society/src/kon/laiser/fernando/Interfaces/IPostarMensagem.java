@@ -1,5 +1,7 @@
 package kon.laiser.fernando.Interfaces;
 
+import kon.laiser.fernando.Enums.HorarioSistema;
+
 public interface IPostarMensagem {
-    void postarMensagem();
+    public abstract void Mensagem(HorarioSistema horario);
 }

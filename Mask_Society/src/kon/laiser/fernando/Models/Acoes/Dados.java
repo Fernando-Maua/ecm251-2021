@@ -1,6 +1,6 @@
 package kon.laiser.fernando.Models.Acoes;
 
-public class Dados {
+public class Dados extends Object {
     final public String funcao;
     final public String nome;
     final public String email;

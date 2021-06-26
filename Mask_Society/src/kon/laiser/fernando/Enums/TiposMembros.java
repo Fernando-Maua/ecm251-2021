@@ -1,8 +1,8 @@
 package kon.laiser.fernando.Enums;
 
-public enum TipoMembros {
+public enum TiposMembros {
     MobileMembers,
     HeavyLifters,
     ScriptGuys,
-    BigBrothers;
+    BigBrothers
 }

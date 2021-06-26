@@ -1,24 +1,20 @@
 package kon.laiser.fernando.Models.Acoes;
 
+import kon.laiser.fernando.Enums.TiposMembros;
+import kon.laiser.fernando.Models.*;
+
 import java.io.*;
 import java.util.*;
-;
+
+import static kon.laiser.fernando.Enums.TiposMembros.BigBrothers;
+import static kon.laiser.fernando.Enums.TiposMembros.ScriptGuys;
+
 
 public class Cadastro {
 
-    public static void Cadastrar(){
-        String func, nome, email;
-        Scanner input = new Scanner(System.in);
+    final private static Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Função do usuário:");
-        func = input.nextLine();
-
-        System.out.println("Nome do usuário:");
-        nome = input.nextLine();
-
-        System.out.println("Email do usuário:");
-        email = input.nextLine();
-
+    public static void Cadastrar(String func, String nome, String email){
         File fw = null;
         try {
             fw = new File("Dados.txt");
@@ -73,6 +69,50 @@ public class Cadastro {
         }
         catch (Exception exception){
             System.out.println("Algo deu errado:");
+        }
+    }
+
+    public static Membro Listar(){
+
+        System.out.println("Nome do usuário:");
+        String nome = scanner.next();
+
+        System.out.println("Email do usuário:");
+        String email = scanner.next();
+
+        System.out.println("Opções de Membros Disponiveis:");
+        System.out.println(
+                "1 - Big Brother.\n"+
+                        "2 - Heavy Lifter.\n" +
+                        "3 - Script Guy.\n" +
+                        "4 - Mobile Member.\n" +
+                        "5 - Cancelar.\n"+
+                        "Digite a sua Opção: "
+        );
+        int input = scanner.nextInt();
+        switch (input){
+            case 1:
+                Cadastrar("Big Brothers",nome,email);
+                return new BigBrothers(nome, email, TiposMembros.BigBrothers);
+
+            case 2:
+                Cadastrar("Heavy Lifters",nome,email);
+                return new HeavyLifters(nome,email, TiposMembros.HeavyLifters);
+            case 3:
+                Cadastrar("Script Guys",nome,email);
+                return new ScriptGuys(nome,email, TiposMembros.ScriptGuys);
+
+            case 4:
+                Cadastrar("Mobile Members",nome,email);
+                return new MobileMembers(nome,email, TiposMembros.MobileMembers);
+
+            case 5:
+                System.out.println("Voltando ao Menu Principal...");
+                return null;
+
+            default:
+                System.out.println("Opção Invalida.");
+                return null;
         }
     }
 }
