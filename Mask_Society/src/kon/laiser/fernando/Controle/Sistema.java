@@ -5,6 +5,7 @@ import kon.laiser.fernando.Interfaces.IPostarMensagem;
 import kon.laiser.fernando.Models.Acoes.Cadastro;
 import kon.laiser.fernando.Models.Membro;
 
+import javax.management.StringValueExp;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -18,6 +19,8 @@ public class Sistema{
     public static void run() throws InterruptedException, IOException {
         boolean running = true;
 
+        //Membro membro0 = new HeavyLifters("a","b",TiposMembros.HeavyLifters);
+
 
         while(running){
             System.out.println("******* Bem Vindo ao Mask_Society *******\n");
@@ -26,8 +29,8 @@ public class Sistema{
                     "--------MENU DE OPÇÕES--------\n" +
                             "HORARIO ATUAL: " + HoraAtual + "\n" +
                             "1 - Cadastrar um novo Membro.\n"+
-                            "2 - Exibir Relatório de Informações.\n" +
-                            "3 - Postar mensagem.\n" +
+                            "2 - Postar mensagem.\n" +
+                            "3 - Exibir Relatório de Informações.\n" +
                             "4 - Remover um Membro.\n" +
                             "5 - Verificar Horário\n"+
                             "6 - Trocar o horário de trabalho.\n" +
@@ -39,51 +42,46 @@ public class Sistema{
             switch (input){
                 case 1 :
                     Cadastro cadastro = new Cadastro();
-                    Membro membro = cadastro.Listar();
-                    lista.AddMembro(membro);
-                    System.out.println("Membro Adicionado!");
+                    //cadastro.Cadastrar();
 
+                    Membro membro = cadastro.Listar();
+                    if (membro != null) {
+                        lista.AddMembro(membro);
+                        System.out.println("Membro Adicionado!");
+                        lista.getListaDeMembros();
+                    }
                     System.out.println("Press Enter to Continue...");
                     System.in.read();
                     break;
 
 
                 case 2:
-                    lista.getListaDeMembros();
+                    //for(Membro membros : lista.getListaDeMembros())
+                    //    membros.Mensagem(HoraAtual);
 
+                    for(int i = 0;i<lista.getListaDeMembros().size();i++) {
+                        System.out.println("MEMBRO " + i + " :");
+                        lista.getListaDeMembros().get(i).Mensagem(HoraAtual);
+                    }
                     System.out.println("Press Enter to Continue...");
                     System.in.read();
                     break;
 
 
                 case 3:
-                    for(Membro membros : lista.getListaDeMembros())
-                        membros.Mensagem(HoraAtual);
+                    for(int i = 0;i<lista.getListaDeMembros().size();i++){
+                        System.out.println("MEMBRO "+ i + " :");
+                        lista.getListaDeMembros().get(i).ExibirRelatorio();
+                    }
 
-                    System.out.println("Press Enter to Continue...");
+                    System.out.println("\nPress Enter to Continue...");
                     System.in.read();
                     break;
 
                 case 4:
-                    try {
-                        for (int i = 0; i < lista.getListaDeMembros().size(); i++) {
-                            System.out.println("MEMBRO " + i + " :");
-                            lista.getListaDeMembros().get(i).ExibirRelatorio();
-                        }
-                        System.out.println("Escolha um Membro para Remover: ");
-
-                        int remove = scanner.nextInt();
-                        if (remove < lista.getListaDeMembros().size()) {
-                            lista.RemoverMembro(lista.getListaDeMembros().get(remove));
-                            System.out.println("Membro " + remove + "Removido Com Sucesso!");
-
-                        } else {
-                            System.out.println("Opção Invalida.");
-                        }
-                    }catch (IOException e){
-                        System.out.println("Algo deu errado!");
-                    }
-
+                    ControleLista remover = new ControleLista();
+                    remover.excluir(lista.getListaDeMembros());
+                    remover.exportar(lista.getListaDeMembros());
 
                     System.out.println("Press Enter to Continue...");
                     System.in.read();

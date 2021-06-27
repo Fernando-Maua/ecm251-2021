@@ -17,6 +17,9 @@ public class Dados extends Object {
         this.email = email;
     }
 
+    public static void add(String linha) {
+    }
+
     /**
      * Método que representa o estado do objeto item
      * @return
